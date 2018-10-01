@@ -86,43 +86,9 @@ public class menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here
         
-      try
-    {
-      // create a mysql database connection
-      String myDriver = "org.gjt.mm.mysql.Driver";
-      String myUrl = "jdbc:mysql://localhost/test";
-     Class.forName("com.mysql.jdbc.Driver");
-      Connection conn = DriverManager.getConnection("JDBC:mysql://localhost:3306/demo", "root", "root");
-    
-      // create a sql date object so we can use it in our INSERT statement
-      Calendar calendar = Calendar.getInstance();
-      java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
-
-      // the mysql insert statement
-      String query = " insert into users (name, id, place)"
-        + " values (?, ?, ?)";
-
-      // create the mysql insert preparedstatement
-      PreparedStatement preparedStmt = conn.prepareStatement(query);
-      preparedStmt.setString (1, "Barney");
-      preparedStmt.setInt (2, 24);
-      preparedStmt.setString   (3, "Hotel");
-   JOptionPane.showMessageDialog(null, "Record Added!  ");
-
-      // execute the preparedstatement
-      preparedStmt.execute();
-      
-      conn.close();
-      
-      
-    }
-    catch (Exception e)
-    {
-     JOptionPane.showMessageDialog(null, "unable to add record  ");
-JOptionPane.showMessageDialog(null, "unable to add record ,");
-    }
+     adduser tf2 =new adduser();
   
-
+tf2.setVisible(true);
      
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -11,12 +11,12 @@ package jdbcdemo;
  */
 public class Employee {
     
-     private double accountNumber = 0;
-  private int  id  = 0;
-  private String customerName = "";
-  private String name  = "";
-  private String place;
-  private int salary = 0;
+     double accountNumber = 0;
+ int  id  = 0;
+  String customerName = "";
+   String name  = "";
+   String place;
+   int salary = 0;
   
   
     public  Employee (String name, int id, String place,int salary ){
