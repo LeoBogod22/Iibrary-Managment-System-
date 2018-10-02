@@ -72,7 +72,7 @@ public class gui2 extends JDialog {
     JButton btnLogin = new JButton("Login");
     btnLogin.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent arg0) {
-        if(username.getText().equals("HELLO") && password.getText().equals("WORLD") ) {
+        if(username.getText().equals("admin") && password.getText().equals("admin123") ) {
           JOptionPane.showMessageDialog(null, "Login Sucessful ");
           menu tf2 =new menu();
 tf2.setVisible(true);

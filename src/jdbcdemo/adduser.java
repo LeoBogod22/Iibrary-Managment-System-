@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package jdbcdemo;
+import static java.lang.Integer.max;
 import java.util.Random;
    import java.sql.Connection;
 import java.sql.DriverManager;
@@ -62,7 +63,7 @@ public class adduser extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("ID");
+        jLabel4.setText("Work");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,13 +121,14 @@ public class adduser extends javax.swing.JFrame {
         
         String name = jTextField1.getText();
         int salary = Integer.parseInt(jTextField3.getText());
+        
+        String WorkPosition  = jTextField4.getText();
         Random rand = new Random();
 
-
-      int  id = 4;
+      int id =  rand.nextInt(10) + 1;
         String Address = jTextField2.getText();
         
-        Employee user = new Employee(name , id+1,Address, salary);
+        Employee user = new Employee(id , name ,Address, salary, WorkPosition);
         
         
         
@@ -145,15 +147,16 @@ public class adduser extends javax.swing.JFrame {
       java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
 
       // the mysql insert statement
-      String query = " insert into users (name , salary , id , place)"
-        + " values (?, ?, ?, ?)";
+      String query = " insert into users (id, name , salary ,  place, workposition)"
+        + " values (?, ?, ?, ?, ?)";
 
       // create the mysql insert preparedstatement
       PreparedStatement preparedStmt = conn.prepareStatement(query);
-      preparedStmt.setString (1, user.name);
-      preparedStmt.setInt (2, user.salary);
-      preparedStmt.setString   (3, user.place);
-      preparedStmt.setInt   (4,id + 1);
+      preparedStmt.setInt (1, user.id);
+      preparedStmt.setString (2, user.name);
+      preparedStmt.setInt (3, user.salary);
+      preparedStmt.setString   (4,user.place);
+  preparedStmt.setString (5,user.workposition);
    JOptionPane.showMessageDialog(null, "Record Added!  ");
 
       // execute the preparedstatement

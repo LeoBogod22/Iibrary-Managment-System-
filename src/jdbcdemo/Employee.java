@@ -16,15 +16,18 @@ public class Employee {
   String customerName = "";
    String name  = "";
    String place;
+   String workposition="";
    int salary = 0;
   
   
-    public  Employee (String name, int id, String place,int salary ){
-    
+    public  Employee (int id, String name,  String place,int salary, String workposition ){
+      this.id =id;
         this.name = name;
-        this.id=id;
+       
         this.place= place;
         this.salary = salary; 
+        
+        this.workposition= workposition;
     
     
 }
