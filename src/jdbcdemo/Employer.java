@@ -55,9 +55,19 @@ public class Employer extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Issue Books");
+        jButton3.setText("Issue Book");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("View Issued Books");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Return A Book ");
 
@@ -109,6 +119,23 @@ tf2.setVisible(true);        // TODO add your handling code here:
  ViewBook  tf2 =new ViewBook();
 tf2.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        IssueBookDao tf2 =new IssueBookDao();
+tf2.setVisible(true);  
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        
+              
+        IssuedBooks tf2 =new IssuedBooks();
+tf2.setVisible(true);  
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
