@@ -1,7 +1,7 @@
 # Library Managment System
 <p align="center">
   <a href="https://github.com/bikashtudu/DBISProject/stargazers">
-    <img alt="GitHub stars" src="https://github.com/LeoBogod22/Employee-Managment-System-/stargazers">
+    <img alt="GitHub stars" src="https://github.com/LeoBogod22/Employee-Managment-System-/stargazers.svg">
   </a>
   <a href="https://github.com/bikashtudu/DBISProject/network">
     <img alt="GitHub forks" src="https://github.com/LeoBogod22/Employee-Managment-System-/stargazers">
