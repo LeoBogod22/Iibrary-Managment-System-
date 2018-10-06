@@ -15,12 +15,12 @@ A modern  Library managment system made in Java and MYSQL database.
   * [FontawesomeFX](https://bitbucket.org/Jerady/fontawesomefx) - Icon library
   
 
-![alt text](book.png)
+![alt text](all.png)
 
 
 # Features
 
-![alt text](all.png)
+![alt text](books.png)
 - Add Books
 
 - Issue Books
@@ -49,4 +49,4 @@ A modern  Library managment system made in Java and MYSQL database.
 
 
 
-![alt text](img3.png)
+![alt text](img.png)
