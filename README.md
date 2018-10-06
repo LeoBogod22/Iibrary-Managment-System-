@@ -1,8 +1,8 @@
 # Library Managment System
 
 
+This is a library management software developed using Java  and Swing library. The entire  video with demonstation of each and every part (in realtime) is available in my YouTube Channel [Leo Bogod Youtube Channel](https://www.youtube.com/watch?v=3ZoGtDq64Ys).
 
-A modern  Library managment system made in Java and MYSQL database.  
 
 
 ### Libraries 
@@ -10,7 +10,7 @@ A modern  Library managment system made in Java and MYSQL database.
 
   * [UniServer](http://www.uniformserver.com/) -  WAMP server solution 
   * [Swing](https://github.com/robotframework/SwingLibrary) - GUI library
-  * [Apache Commons](https://commons.apache.org/) - For creating SHA hash
+  * [MYSQL WORKBENCH](https://www.mysql.com/products/workbench/) - For creating database Tables
   * [GSon](https://github.com/google/gson) - JSON Library. Used for storing configuration
   * [FontawesomeFX](https://bitbucket.org/Jerady/fontawesomefx) - Icon library
   
