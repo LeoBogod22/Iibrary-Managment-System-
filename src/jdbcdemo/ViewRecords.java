@@ -26,73 +26,63 @@ import javax.swing.table.DefaultTableModel;
 public class ViewRecords extends javax.swing.JFrame {
 
 
-  
+
     /**
      * Creates new form ViewRecords
      */
-    
+
     public ViewRecords() {
         initComponents();
-             PreparedStatement ps=null;
-        ResultSet rs=null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
         int id;
         int age;
-        
+
         String name;
         String department;
-        Vector data = new Vector(); 
-         DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
-           try
-    {
-      // create a mysql database connection
-      String myDriver = "org.gjt.mm.mysql.Driver";
-      String myUrl = "jdbc:mysql://localhost/test";
-     Class.forName("com.mysql.jdbc.Driver");
-      Connection conn = DriverManager.getConnection("JDBC:mysql://localhost:3306/demo", "root", "root");
-      
-      
-      ps=conn.prepareStatement("select * from users");
-      
-       rs=ps.executeQuery();
-       
-         ResultSetMetaData metaData = rs.getMetaData();
- int columns = metaData.getColumnCount();
- 
+        Vector data = new Vector();
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        try {
+            // create a mysql database connection
+            String myDriver = "org.gjt.mm.mysql.Driver";
+            String myUrl = "jdbc:mysql://localhost/test";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("JDBC:mysql://localhost:3306/demo", "root", "root");
 
-   Vector heading = new Vector(); 
-       while(rs.next())
-            {
-                
-                 Vector row = new Vector(columns);
-       for (int i = 1; i <= columns; i++) {
-        row.addElement(rs.getObject(i));
-       }
-       data.addElement(row);
-       model.addRow(row);
-      
-//here you can get data, the '1' indicates column number based on your query
+
+            ps = conn.prepareStatement("select * from users");
+
+            rs = ps.executeQuery();
+
+            ResultSetMetaData metaData = rs.getMetaData();
+            int columns = metaData.getColumnCount();
+
+
+            Vector heading = new Vector();
+            while (rs.next()) {
+
+                Vector row = new Vector(columns);
+                for (int i = 1; i <= columns; i++) {
+                    row.addElement(rs.getObject(i));
+                }
+                data.addElement(row);
+                model.addRow(row);
+
+                //here you can get data, the '1' indicates column number based on your query
 
             }
-       
-       
-     
-       }
-      
-      
-    
-           
-           
-           
-           catch (Exception e)
-    {
-      System.err.println("Got an exception!");
-      System.err.println(e.getMessage());
-    }
-         
 
 
-           
-       
+
+        } catch (Exception e) {
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
+        }
+
+
+
+
+
     }
 
     /**
@@ -115,19 +105,29 @@ public class ViewRecords extends javax.swing.JFrame {
         jTable1.setBackground(java.awt.SystemColor.activeCaption);
         jTable1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 255)));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null}
+            new Object[][] {
+                {
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                }
             },
-            new String [] {
-                "ID", "name", "Address", "WorkPosition", "Hourly Salary"
+            new String[] {
+                "ID",
+                "name",
+                "Address",
+                "WorkPosition",
+                "Hourly Salary"
             }
         ) {
-            Class[] types = new Class [] {
+            Class[] types = new Class[] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
         });
         jScrollPane5.setViewportView(jTable1);
@@ -150,22 +150,22 @@ public class ViewRecords extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    } // </editor-fold>//GEN-END:initComponents
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-        
-   
+
+
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (javax.swing.UIManager.LookAndFeelInfo info: javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
