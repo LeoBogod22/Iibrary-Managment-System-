@@ -10,39 +10,39 @@ package jdbcdemo;
  * @author User
  */
 public class Employee {
-    
-     double accountNumber = 0;
- int  id  = 0;
-  String customerName = "";
-   String name  = "";
-   String place;
-   String email;
-   String workposition="";
-   int salary = 0;
-  
-  
-    public  Employee (int id, String name, String place,int salary, String workposition ){
-      this.id =id;
+
+    double accountNumber = 0;
+    int id = 0;
+    String customerName = "";
+    String name = "";
+    String place;
+    String email;
+    String workposition = "";
+    int salary = 0;
+
+
+    public Employee(int id, String name, String place, int salary, String workposition) {
+        this.id = id;
         this.name = name;
-       
-        this.place= place;
-        this.salary = salary; 
-        
-        this.workposition= workposition;
-    
-    
-}
-    
-    
-    public String getname() {
-    
-    return name;
-}
-    
-    public int salary(int salary){
-       this.salary +=salary;
-       
-       return salary;
+
+        this.place = place;
+        this.salary = salary;
+
+        this.workposition = workposition;
+
+
     }
-    
+
+
+    public String getname() {
+
+        return name;
+    }
+
+    public int salary(int salary) {
+        this.salary += salary;
+
+        return salary;
+    }
+
 }
